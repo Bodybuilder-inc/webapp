@@ -2,21 +2,43 @@
   "name": "bodybuilder",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "check:integrity": "yarn check --integrity && cd ./pages && yarn check --integrity",
+    "lint": "next lint --fix --ext js,jsx,ts,tsx .",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx}\"",
+    "unit:test": "cd ./pages && yarn test",
+    "unit:test:coverage": "cd ./pages && yarn test:coverage",
+    "e2e:test": "yarn cypress run",
+    "e2e:test:interactive": "yarn cypress open"
   },
   "dependencies": {
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn check:integrity && yarn lint && yarn format"
+    }
+  },
   "devDependencies": {
+    "@testing-library/react": "^12.1.2",
     "@types/react": "17.0.31",
-    "eslint": "8.0.1",
+    "@typescript-eslint/parser": "^5.1.0",
+    "@vtex/prettier-config": "^0.3.6",
+    "cypress": "^8.6.0",
+    "eslint": "^7.32.0",
     "eslint-config-next": "11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "prettier": "^2.4.1",
     "typescript": "4.4.4"
   }
 }

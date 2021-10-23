@@ -10,6 +10,7 @@
     "lint": "next lint --fix --ext js,jsx,ts,tsx .",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx}\"",
     "unit:test": "cd ./pages && jest --testPathPattern \"test.(ts|tsx)\" --verbose",
+    "unit:test:husky": "cd ./pages && jest --bail --testPathPattern \"test.(ts|tsx)\" --verbose",
     "unit:test:coverage": "cd ./pages && yarn test:coverage",
     "e2e:test": "yarn cypress run",
     "e2e:test:interactive": "yarn cypress open"
@@ -24,7 +25,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "yarn check:integrity && yarn lint && yarn format",
-      "pre-push": "yarn unit:test"
+      "pre-push": "yarn unit:test:husky"
     }
   },
   "devDependencies": {

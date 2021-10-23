@@ -1,6 +1,6 @@
 {
   "name": "bodybuilder",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -13,7 +13,8 @@
     "unit:test:husky": "cd ./pages && jest --bail --testPathPattern \"test.(ts|tsx)\" --verbose",
     "unit:test:coverage": "cd ./pages && yarn test:coverage",
     "e2e:test": "yarn cypress run",
-    "e2e:test:interactive": "yarn cypress open"
+    "e2e:test:interactive": "yarn cypress open",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@types/jest": "^27.0.2",
@@ -50,7 +51,8 @@
     "eslint-config-vtex-react": "^8.2.0",
     "husky": "4",
     "prettier": "^2.4.1",
-    "typescript": "4.4.4"
+    "typescript": "4.4.4",
+    "semantic-release": "^17.0.4"
   },
   "config": {
     "commitizen": {

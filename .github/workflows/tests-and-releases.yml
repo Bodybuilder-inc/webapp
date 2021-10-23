@@ -1,4 +1,4 @@
-name: CI_Bodybuilder_test
+name: Node Continuous Integration
 
 on:
   pull_request:
@@ -6,12 +6,12 @@ on:
 
 jobs:
   test_pull_request:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v2
-    - uses: actions/node-setup@v1
-      with:
-        node-version: 12
-    - run: npm ci
-    - run: npm test
-    - run: npm run build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm test
+      - run: npm run build

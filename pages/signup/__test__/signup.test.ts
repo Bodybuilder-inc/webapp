@@ -1,5 +1,7 @@
 import {} from '@testing-library/react'
 
-test('Should render a FormSelect component', () => {
-  expect(true).toBe(true)
+describe('Should render a FormSelect component', () => {
+  it('should be true', () => {
+    expect(true).toBe(true)
+  })
 })

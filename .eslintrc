@@ -1,6 +1,9 @@
 {
   "extends": ["vtex"],
   "plugins": ["vtex"],
+  "env": {
+    "jest": true
+  },
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true

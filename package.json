@@ -24,7 +24,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "yarn check:integrity && yarn lint && yarn format",
-      "pre-push": "yarn unit:test && yarn:e2e:test"
+      "pre-push": "yarn unit:test"
     }
   },
   "devDependencies": {

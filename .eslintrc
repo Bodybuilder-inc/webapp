@@ -1,0 +1,13 @@
+{
+  "extends": ["vtex"],
+  "plugins": ["vtex"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "error",
+    "max-lines": ["error", 400]
+  }
+}

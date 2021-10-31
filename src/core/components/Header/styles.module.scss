@@ -1,0 +1,29 @@
+.headerContainer {
+  height: 5rem;
+  border-bottom: 1px solid var(--white);
+  background: var(--gray-900);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: flex-start;
+  color: var(--white);
+  align-items: center;
+}
+
+.listContent {
+  display: flex;
+  width: 400px;
+  justify-content: space-evenly;
+}
+
+.mainImage {
+  margin-right: 24px;
+}
+
+.signup {
+  margin-left: 64px;
+}

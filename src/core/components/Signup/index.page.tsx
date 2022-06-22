@@ -2,7 +2,7 @@ import React from 'react'
 import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
-  return <div></div>
+  return <div>Test</div>
 }
 
 export default Home
